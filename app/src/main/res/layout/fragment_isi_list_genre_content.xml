@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imageListGenre"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imagecontoh"/>
+
+        <TextView
+            android:id="@+id/judulListGenre"
+            android:text="One Piece"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/imageListGenre"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/genreListGenre"
+            android:layout_width="wrap_content"
+            android:text="Musik,Komedi"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/imageListGenre"
+            android:layout_below="@id/judulListGenre"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/jumlahEpisodeListGenre"
+            android:text="100 Episode"
+            android:layout_toRightOf="@id/imageListGenre"
+            android:layout_below="@id/genreListGenre"
+            android:paddingLeft="10dp"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/hariUploadListGenre"
+            android:text="Episode baru setiap hari RABU"
+            android:layout_toRightOf="@id/imageListGenre"
+            android:layout_below="@id/jumlahEpisodeListGenre"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TableLayout
+            android:layout_toRightOf="@id/imageListGenre"
+            android:layout_below="@id/hariUploadListGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:id="@+id/viewsListGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.000 view"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:id="@+id/downloadListGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="1.000.000 download"
+                    android:textSize="16sp"/>
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

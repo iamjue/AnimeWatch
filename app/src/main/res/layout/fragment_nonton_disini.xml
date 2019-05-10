@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NontonDisini">
+
+    <VideoView
+        android:id="@+id/vid_Views"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <TextView
+        android:id="@+id/tvJudulNontonDisini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vid_Views"
+        android:paddingLeft="10dp"
+        android:text="One Piece Episode 400"
+        android:textColor="@color/colorBlack"
+        android:textSize="25dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJudulNontonDisini">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_genre_nonton_disini"
+                android:paddingLeft="10dp"
+                android:text="Fantasi"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_views_nonton_disini"
+                android:paddingLeft="10dp"
+                android:text="1.106 views"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_downloads_nonton_disini"
+                android:paddingLeft="10dp"
+                android:text="2.003 downloads"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_full_episode"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:background="#FF473A"
+        android:text="FULL EPISODE"
+        android:textColor="@color/colorCheck"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorCheck"
+        android:background="#FF473A"
+        android:layout_marginBottom="45dp"
+        android:text="DOWNLOAD"
+        android:textSize="30dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailAnime">
+
+    <ImageView
+        android:id="@+id/imageDetailAnime"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagecontoh"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageCircleDetailAnime"
+        android:layout_below="@+id/imageDetailAnime"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/imagecontoh"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/judulDetailAnime"
+        android:layout_toRightOf="@id/imageCircleDetailAnime"
+        android:layout_below="@id/imageDetailAnime"
+        android:paddingTop="20dp"
+        android:text="One Piece"
+        android:textSize="24dp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:paddingLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/JmlahEpisode"
+        android:layout_below="@+id/judulDetailAnime"
+        android:layout_toRightOf="@id/imageCircleDetailAnime"
+        android:text="400 Episode"
+        android:paddingLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/JmlahViews"
+        android:layout_below="@+id/JmlahEpisode"
+        android:layout_toRightOf="@id/imageCircleDetailAnime"
+        android:text="200.245 views"
+        android:paddingLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/JmlahDownload"
+        android:layout_below="@+id/JmlahViews"
+        android:layout_toRightOf="@id/imageCircleDetailAnime"
+        android:text="1.231.123 downloads"
+        android:paddingLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
