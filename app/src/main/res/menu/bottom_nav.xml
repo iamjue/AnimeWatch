@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
-        android:id="@+id/btm_nav_jadwal"
+        android:id="@+id/btm_jadwal"
         android:icon="@drawable/ic_jadwal_white_24dp"
-        android:title="@string/jadwal"/>
+        android:title="Jadwal"/>
+
     <item
-        android:id="@+id/btm_nav_home"
+        android:id="@+id/btm_beranda"
         android:icon="@drawable/ic_home_white_24dp"
-        android:title="@string/beranda"/>
+        android:title="Beranda"/>
+
     <item
-        android:id="@+id/btm_nav_genre"
+        android:id="@+id/btm_genre"
         android:icon="@drawable/ic_genre_white_24dp"
-        android:title="@string/genre"/>
+        android:title="Genre"/>
 
 </menu>
