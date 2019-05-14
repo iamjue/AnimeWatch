@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
+        buildConfigField("String", "SERVER", "\"https://cucusadewa0294.000webhostapp.com/animewatch/animewatch/api/\"")
         applicationId "net.devcamp.animewatch"
         minSdkVersion 21
         targetSdkVersion 28
