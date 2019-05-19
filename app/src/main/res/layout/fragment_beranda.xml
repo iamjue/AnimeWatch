@@ -4,54 +4,8 @@
     android:id="@+id/cardviewHariIni"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
     android:layout_margin="10dp"
     card_view:cardCornerRadius="4dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp">
-
-        <ImageView
-            android:id="@+id/img_cardview_hariIni"
-            android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:scaleType="centerCrop" />
-
-        <TextView
-            android:id="@+id/tv_judul_hariIni"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_cardview_hariIni"
-            android:text="One Piece"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold"
-            android:textSize="24sp"/>
-
-        <TableLayout
-            android:layout_below="@id/tv_judul_hariIni"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TableRow>
-                <TextView
-                    android:id="@+id/tv_genre_hariIni"
-                    android:text="Fantasi"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorBlack"/>
-                <TextView
-                    android:id="@+id/tv_titik_hariIni"
-                    android:text="."
-                    android:textSize="18sp"
-                    android:textColor="@color/colorBlack"
-                    android:layout_marginLeft="10dp"/>
-                <TextView
-                    android:id="@+id/tv_jumlah_views"
-                    android:layout_marginLeft="10dp"
-                    android:text="1.500 views"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="18sp"/>
-            </TableRow>
-        </TableLayout>
-
-    </RelativeLayout>
+    <include layout="@layout/content_beranda_main" />
 </android.support.v7.widget.CardView>
