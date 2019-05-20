@@ -5,10 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".IsiListGenre">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tv_judul_genre"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:padding="15dp"
+        android:text="Musik"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:textSize="35sp"/>
+
+    <include
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        layout="@layout/content_detail_genre_main"/>
 
 </FrameLayout>

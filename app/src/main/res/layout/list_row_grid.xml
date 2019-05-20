@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_gravity="center"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_gravity="center"
     card_view:cardCornerRadius="4dp">
 
     <RelativeLayout
         android:layout_width="180dp"
         android:layout_height="190dp"
-        android:paddingTop="2dp"
         android:paddingLeft="2dp"
+        android:paddingTop="2dp"
         android:paddingRight="2dp"
         android:paddingBottom="2dp">
+
+        <TextView
+            android:id="@+id/tv_id_list_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
         <ImageView
             android:id="@+id/imageJadwalGrid"
             android:layout_width="179dp"
             android:layout_height="158dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/imagecontoh"/>
+            android:src="@drawable/imagecontoh" />
 
         <TextView
             android:id="@+id/judulJadwalGrid"
@@ -30,9 +36,9 @@
             android:layout_marginLeft="55dp"
             android:layout_marginTop="160dp"
             android:layout_marginBottom="2dp"
-            android:textSize="20sp"
             android:text="One Piece"
-            android:textColor="@color/colorTextOnGrid"/>
+            android:textColor="@color/colorTextOnGrid"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
