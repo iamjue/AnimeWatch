@@ -3,22 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IsiListGenre">
+    tools:context=".IsiListGenreFragment">
 
-    <TextView
-        android:id="@+id/tv_judul_genre"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
-        android:padding="15dp"
-        android:text="Musik"
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        android:textSize="35sp"/>
-
-    <include
-        android:layout_marginTop="80dp"
+    <android.support.v7.widget.RecyclerView
+        android:orientation="horizontal"
+        android:id="@+id/rv_genre_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        layout="@layout/content_detail_genre_main"/>
+        tools:listitem="@layout/item_list_detail_genre"/>
+
 
 </FrameLayout>

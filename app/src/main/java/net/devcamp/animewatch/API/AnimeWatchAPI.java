@@ -9,4 +9,9 @@ public class AnimeWatchAPI {
 
         return hariRilis;
     }
+    public String getHome(String string){
+        String urlHome = "home/";
+        String home = BuildConfig.SERVER + urlHome +string;
+        return home;
+    }
 }

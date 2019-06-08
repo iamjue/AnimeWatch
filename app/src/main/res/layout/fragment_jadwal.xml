@@ -4,6 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JadwalFragment">
-
-    <include layout="@layout/content_jadwal_main" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_jadwal_hari"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_gird_hari"/>
 </RelativeLayout>

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //        setSupportActionBar(toolbar);
 //
 //        Objects.requireNonNull(getSupportActionBar()).setTitle("Hari Ini");
+        navigation.setSelectedItemId(R.id.btm_beranda);
     }
 
     private boolean loadFragment(Fragment fragment){

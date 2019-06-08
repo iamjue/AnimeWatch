@@ -21,6 +21,7 @@
             android:id="@+id/img_cardview_list_hariIni"
             android:layout_width="match_parent"
             android:layout_height="240dp"
+            android:background="#11E7AB"
             android:scaleType="centerCrop" />
 
         <TextView
