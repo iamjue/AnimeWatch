@@ -9,9 +9,9 @@ public class AnimeWatchAPI {
 
         return hariRilis;
     }
-    public String getHome(String string){
-        String urlHome = "home/";
-        String home = BuildConfig.SERVER + urlHome +string;
+    public String getHome(){
+//        String urlHome = "home";
+        String home = "https://cucusadewa0294.000webhostapp.com/animewatch/animewatch/api/home/listanime.php";
         return home;
     }
 }

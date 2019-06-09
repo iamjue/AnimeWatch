@@ -1,5 +1,6 @@
 package net.devcamp.animewatch.Adapter;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,17 +8,43 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.bumptech.glide.Glide;
+
 import net.devcamp.animewatch.JadwalFragment;
+import net.devcamp.animewatch.Model.AnimewatchItem;
 import net.devcamp.animewatch.R;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalViewHolder> {
-    private JadwalFragment contex;
+    private JadwalFragment jadwalFragment;
+    private ArrayList<AnimewatchItem>animewatchItems= new ArrayList<>();
 
-    public JadwalAdapter(JadwalFragment contex) {
-        this.contex = contex;
+    public JadwalAdapter(JadwalFragment jadwalFragment) {
+    }
+
+    public JadwalFragment getJadwalFragment() {
+        return jadwalFragment;
+    }
+
+    public void setJadwalFragment(JadwalFragment jadwalFragment) {
+        this.jadwalFragment = jadwalFragment;
+    }
+
+    public ArrayList<AnimewatchItem> getAnimewatchItems() {
+        return animewatchItems;
+    }
+
+    public void setAnimewatchItems(ArrayList<AnimewatchItem> animewatchItems) {
+        this.animewatchItems = animewatchItems;
+    }
+
+    public JadwalAdapter(JadwalFragment jadwalFragment, ArrayList<AnimewatchItem> animewatchItems) {
+        this.jadwalFragment = jadwalFragment;
+        this.animewatchItems = animewatchItems;
     }
 
     @NonNull
@@ -29,12 +56,13 @@ public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalView
 
     @Override
     public void onBindViewHolder(@NonNull JadwalViewHolder jadwalViewHolder, int i) {
+        jadwalViewHolder.btnHari.setText(getAnimewatchItems().get(i).getHari_rilis());
 
     }
 
     @Override
     public int getItemCount() {
-        return 7;
+        return getAnimewatchItems().size();
     }
 
     public class JadwalViewHolder extends RecyclerView.ViewHolder {

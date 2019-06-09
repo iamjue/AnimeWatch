@@ -1,6 +1,5 @@
 package net.devcamp.animewatch.Adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -8,12 +7,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import net.devcamp.animewatch.BerandaFragment;
-import net.devcamp.animewatch.Model.AnimewatchBerandaItem;
+import net.devcamp.animewatch.Model.AnimewatchItem;
 import net.devcamp.animewatch.R;
 
 import java.util.ArrayList;
@@ -22,20 +22,33 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class BerandaAdapter extends RecyclerView.Adapter<BerandaAdapter.BerandaViewHolder> {
-    private Fragment fragment;
-    private BerandaFragment context;
-    private ArrayList<AnimewatchBerandaItem>animewatchBerandaItems;
+    private BerandaFragment berandaFragment;
+    private ArrayList<AnimewatchItem> animewatchItems = new ArrayList<>();
+    Context context;
 
-    public ArrayList<AnimewatchBerandaItem> getAnimewatchBerandaItems() {
-        return animewatchBerandaItems;
+    public BerandaAdapter(BerandaFragment berandaFragment) {
+        this.berandaFragment = berandaFragment;
     }
 
-    public void setAnimewatchBerandaItems(ArrayList<AnimewatchBerandaItem> animewatchBerandaItems) {
-        this.animewatchBerandaItems = animewatchBerandaItems;
+    public BerandaFragment getBerandaFragment() {
+        return berandaFragment;
     }
 
-    public BerandaAdapter(BerandaFragment context) {
-        this.context = context;
+    public void setBerandaFragment(BerandaFragment berandaFragment) {
+        this.berandaFragment = berandaFragment;
+    }
+
+    public ArrayList<AnimewatchItem> getAnimewatchItems() {
+        return animewatchItems;
+    }
+
+    public void setAnimewatchItems(ArrayList<AnimewatchItem> animewatchItems) {
+        this.animewatchItems = animewatchItems;
+    }
+
+    public BerandaAdapter(BerandaFragment berandaFragment, ArrayList<AnimewatchItem> animewatchItems) {
+        this.berandaFragment = berandaFragment;
+        this.animewatchItems = animewatchItems;
     }
 
     @NonNull
@@ -47,12 +60,18 @@ public class BerandaAdapter extends RecyclerView.Adapter<BerandaAdapter.BerandaV
 
     @Override
     public void onBindViewHolder(@NonNull BerandaViewHolder berandaViewHolder, int i) {
-
+        berandaViewHolder.tvJudulListHariIni.setText(getAnimewatchItems().get(i).getJudul());
+        berandaViewHolder.tvGenreListHariIni.setText(getAnimewatchItems().get(i).getGenre());
+        berandaViewHolder.tvId.setText(getAnimewatchItems().get(i).getId());
+        berandaViewHolder.tvJumlahViewsList.setText(getAnimewatchItems().get(i).getJumlah_tayang()+" Views");
+        Glide.with(getBerandaFragment().getActivity())
+                .load(getAnimewatchItems().get(i).getGambar())
+                .into(berandaViewHolder.imgCardviewListHariIni);
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return getAnimewatchItems().size();
     }
 
 
