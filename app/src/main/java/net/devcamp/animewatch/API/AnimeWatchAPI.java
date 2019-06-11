@@ -14,4 +14,8 @@ public class AnimeWatchAPI {
         String home = "https://cucusadewa0294.000webhostapp.com/animewatch/animewatch/api/home/listanime.php";
         return home;
     }
+    public String getGenre(){
+        String genre = BuildConfig.SERVER +"genre/genre.php";
+        return genre;
+    }
 }

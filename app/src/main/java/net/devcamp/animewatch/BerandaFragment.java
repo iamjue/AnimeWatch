@@ -16,6 +16,7 @@ import net.devcamp.animewatch.API.AnimeWatchAPI;
 import net.devcamp.animewatch.Adapter.BerandaAdapter;
 import net.devcamp.animewatch.Adapter.JadwalAdapter;
 import net.devcamp.animewatch.Model.AnimewatchItem;
+import net.devcamp.animewatch.Model.GenreItem;
 import net.devcamp.animewatch.Presenter.AnimewatchPresenter;
 import net.devcamp.animewatch.View.MainView;
 
@@ -57,6 +58,11 @@ public class  BerandaFragment extends Fragment implements MainView {
         berandaAdapter.setAnimewatchItems(animewatchItem);
         rvBeranda.setAdapter(berandaAdapter);
         berandaAdapter.notifyDataSetChanged();
+
+    }
+
+    @Override
+    public void showGenre(ArrayList<GenreItem> genreItem) {
 
     }
 }

@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import net.devcamp.animewatch.API.AnimeWatchAPI;
 import net.devcamp.animewatch.Adapter.JadwalAdapter;
 import net.devcamp.animewatch.Model.AnimewatchItem;
+import net.devcamp.animewatch.Model.GenreItem;
 import net.devcamp.animewatch.Presenter.AnimewatchPresenter;
 import net.devcamp.animewatch.View.MainView;
 
@@ -56,6 +57,11 @@ public class JadwalFragment extends Fragment implements MainView {
         jadwalAdapter.setAnimewatchItems(animewatchItem);
         rvJadwalHari.setAdapter(jadwalAdapter);
         jadwalAdapter.notifyDataSetChanged();
+
+    }
+
+    @Override
+    public void showGenre(ArrayList<GenreItem> genreItem) {
 
     }
 }
